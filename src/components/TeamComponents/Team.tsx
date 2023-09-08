@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import React from "react";
 import { useLogin } from "../../LoginProvider";
-import ClipLoader from "react-spinners/ClipLoader";
 import SelectTeam from "./SelectTeam";
 import axios from "axios";
 import AddMember from "./AddMember";
@@ -150,21 +150,13 @@ export default function Team(props: any) {
   return (
     <div>
       {loading || !props.selected ? (
-        <div className="flex h-screen w-full items-center justify-center ">
-          <ClipLoader
-            color={"#1D3557"}
-            loading={loading}
-            size={50}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-        </div>
+        <div className="flex h-screen w-full items-center justify-center "></div>
       ) : (
         <>
-          <h1 className="ml-6 mt-6 mb-8 text-2xl font-semibold text-[#1D3557]">
+          <h1 className="mb-8 ml-6 mt-6 text-2xl font-semibold text-[#1D3557]">
             Teams
           </h1>
-          <div className="absolute top-4 right-24 flex md:right-8">
+          <div className="absolute right-24 top-4 flex md:right-8">
             {!isAdmin && (
               <button
                 onClick={handleClick}
