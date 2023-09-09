@@ -1,6 +1,5 @@
 import { useState } from "react";
 import React from "react";
-import ProgressBar from "react-animated-progress-bar";
 import TicketItem from "./TicketItem";
 
 export default function Ticket() {
@@ -34,24 +33,7 @@ export default function Ticket() {
             <h2 className="text-md text-center text-gray-500">Total Tickets</h2>
           </div>
           <div className="hidden h-48 flex-col  items-center justify-center rounded-lg border border-[#1D3557] bg-white shadow-md md:flex">
-            <div className="mt-4 mb-2 h-24 w-24 ">
-              <ProgressBar
-                width="200px"
-                height="10px"
-                fontColor="black"
-                trackWidth="18"
-                percentage={percentage}
-                trackPathColor="#F3F4F6"
-                trackBorderColor="white"
-                defColor={{
-                  fair: "green",
-                  good: "green",
-                  excellent: "green",
-                  poor: "green",
-                }}
-              />
-            </div>
-            <h2 className="text-center text-2xl font-bold text-black">
+           <h2 className="text-center text-2xl font-bold text-black">
               {ticketStatus.open}
             </h2>
             <h2 className="text-md mb-4 text-center text-gray-500">
@@ -59,24 +41,7 @@ export default function Ticket() {
             </h2>
           </div>
           <div className="hidden h-48 flex-col items-center justify-center rounded-lg border border-[#1D3557] bg-white shadow-md md:flex">
-            <div className="mt-4 mb-2 h-24 w-24 ">
-              <ProgressBar
-                width="200px"
-                height="10px"
-                fontColor="black"
-                trackWidth="18"
-                percentage={percentage}
-                trackPathColor="#F3F4F6"
-                trackBorderColor="white"
-                defColor={{
-                  fair: "#457B9D",
-                  good: "#457B9D",
-                  excellent: "#457B9D",
-                  poor: "#457B9D",
-                }}
-              />
-            </div>
-            <h2 className="text-center text-2xl font-bold text-black">
+           <h2 className="text-center text-2xl font-bold text-black">
               {ticketStatus.development}
             </h2>
             <h2 className="text-md mb-2 text-center text-gray-500">
