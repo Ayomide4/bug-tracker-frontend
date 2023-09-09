@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import ProgressBar from "react-animated-progress-bar";
 import TicketItem from "./TicketItem";
 
