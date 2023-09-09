@@ -18,22 +18,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
-            <Route
-              path="/"
-              element={
-                <RequireAuth loginPath="/login">
-                  <DashboardPage />
-                </RequireAuth>
-              }
-            />
-            <Route
-              path="/dashboard"
-              element={
-                <RequireAuth loginPath="/login">
-                  <DashboardPage />
-                </RequireAuth>
-              }
-            />
+            
+            
             <Route
               path="/projects"
               element={
