@@ -118,6 +118,9 @@ export default function ({ setTrigger, notify }: Props) {
       });
   };
 
+  console.log('login page')
+  console.log("login state", login?.loginInfo);
+
   return (
     <div className="m-4 flex h-full justify-center bg-white md:w-2/5">
       <ToastContainer />
