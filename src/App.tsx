@@ -28,6 +28,7 @@ function App() {
                 <DashboardPage />
               </RequireAuth>}/>
             <Route path='/projects' element={<RequireAuth loginPath='/login'><ProjectPage /></RequireAuth>}/>
+            <Route path='/test' element={<RequireAuth loginPath='/login'><TicketPage/></RequireAuth>}/>
             <Route path='/tickets' element={<RequireAuth loginPath='/login'><TicketPage /></RequireAuth>}/>
             <Route path='/team' element={<RequireAuth loginPath='/login'><AdminPage/></RequireAuth>}/>
             <Route path='*' element={<ErrorPage/>}/>
