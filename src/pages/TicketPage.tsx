@@ -13,6 +13,7 @@ export default function TicketPage() {
 
   return (
     <div className='max-w-full h-full md:h-screen flex p-0 m-0 bg-[#F4F6F6]'>
+      <Navbar isOpen={isOpen}/>
     </div>
   )
 }
