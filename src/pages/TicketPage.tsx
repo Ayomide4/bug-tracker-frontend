@@ -3,9 +3,7 @@ import { Navbar } from '../components/Navbar'
 import Tickets from '../components/TicketComponents/Tickets'
 import MobileNavbar from '../components/MobileNavbar'
 
-
-
-export default function TicketPage(){}{ 
+export default function TicketPage() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const handleClick = () => {
     setIsOpen(prev => !prev)
