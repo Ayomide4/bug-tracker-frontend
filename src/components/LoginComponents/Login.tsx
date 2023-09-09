@@ -65,7 +65,7 @@ export default function ({ setTrigger, notify }: Props) {
               email: login?.loginInfo.email,
             },
           });
-          navigate("/");
+          navigate("/dashboard");
           login?.setLoginInfo({
             ...response.data,
             password: "",
@@ -107,7 +107,7 @@ export default function ({ setTrigger, notify }: Props) {
             email: login?.loginInfo.email,
           },
         });
-        navigate("/");
+        navigate("https://bug-frontend-oj63.onrender.com/dashboard");
         login?.setLoginInfo({
           ...response.data,
           password: "",
