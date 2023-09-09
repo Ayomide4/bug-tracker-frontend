@@ -17,7 +17,7 @@ function App() {
       <DashboardProvider>
         <Router>
           <Routes>
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/" element={<LoginPage />} />
             
             
             <Route
