@@ -107,7 +107,7 @@ export default function ({ setTrigger, notify }: Props) {
             email: login?.loginInfo.email,
           },
         });
-        navigate("https://bug-frontend-oj63.onrender.com/dashboard");
+        navigate("/dashboard");
         login?.setLoginInfo({
           ...response.data,
           password: "",

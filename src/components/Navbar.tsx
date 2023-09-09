@@ -1,3 +1,4 @@
+import React from "react";
 import {
   AiOutlineBug,
   AiOutlineHome,
@@ -45,7 +46,7 @@ export const Navbar = ({isOpen}: Props) => {
   function renderSwitch(index: number): string {
     switch (index) {
       case 0:
-        return "/";
+        return "/dashboard";
         break;
       case 1:
         return "/projects";
@@ -57,7 +58,7 @@ export const Navbar = ({isOpen}: Props) => {
         return "/team";
         break;
       default:
-        return "/";
+        return "/dashboard";
     }
   }
 
@@ -70,7 +71,7 @@ export const Navbar = ({isOpen}: Props) => {
       }
     >
       <div className="relative mt-4 flex w-full flex-col gap-5 pt-4">
-        <Link to="/">
+        <Link to="/dashboard">
           <span className="mb-10 flex cursor-pointer items-center justify-center gap-2 ">
             <AiOutlineBug size="24" color="#64C2CA" />
             <h2 className="flex w-fit font-bold text-white md:text-xl">
