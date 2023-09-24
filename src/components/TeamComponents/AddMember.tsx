@@ -88,7 +88,7 @@ export default function AddMember({
         } else if (error.response.status === 404) {
           notifyTeam(error.response.status);
         }
-        console.log(`error ${error}`);
+        // console.log(`error ${error}`);
       });
   };
 
@@ -99,10 +99,10 @@ export default function AddMember({
   return (
     <>
       {isModalOpen && (
-        <div className="absolute top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-20">
+        <div className="absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-20">
           <div className="relative h-40 w-72 bg-white opacity-100 md:h-32 md:w-2/5 md:p-10">
             <button
-              className="absolute top-4 left-6 h-7 w-20 bg-[#1D3557] text-white"
+              className="absolute left-6 top-4 h-7 w-20 bg-[#1D3557] text-white"
               onClick={() => setIsModalOpen((prev) => !prev)}
             >
               Cancel
@@ -114,7 +114,7 @@ export default function AddMember({
                   className="border  border-black md:ml-8"
                   onChange={(e) => handleChange(e)}
                 />
-                <button className="mt-4 ml-4 h-8 w-20 bg-[#1D3557] text-lg text-white md:mt-0">
+                <button className="ml-4 mt-4 h-8 w-20 bg-[#1D3557] text-lg text-white md:mt-0">
                   Add
                 </button>
               </div>

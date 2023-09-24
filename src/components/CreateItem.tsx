@@ -74,9 +74,9 @@ export default function CreateItem(props: any) {
           })
           .catch(function (error) {
             if (error.response) {
-              console.log("PROJECT DONT EXIST");
+              // console.log("PROJECT DONT EXIST");
               notify("ticketError");
-              console.log(error.response.status);
+              // console.log(error.response.status);
               props.setFormData(blankData);
             }
           });

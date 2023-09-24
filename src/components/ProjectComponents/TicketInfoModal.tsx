@@ -47,7 +47,7 @@ export default function TicketInfoModal({
     if (item.memberId.fullName !== btnTitle) {
       setIsClicked((prev) => !prev);
       setBtnTitle(item.memberId.fullName);
-      console.log(ticketData.title, item.memberId.fullName);
+      // console.log(ticketData.title, item.memberId.fullName);
       axios.patch("https://bug-tracker-f329.onrender.com/update-ticket", {
         title: ticketData.title,
         dev: item.memberId.fullName,
@@ -66,7 +66,7 @@ export default function TicketInfoModal({
   return (
     <>
       {isModalOpen && (
-        <div className=" fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-20">
+        <div className=" fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-20">
           <div className="relative h-3/5 w-4/5 bg-white md:w-2/5">
             <div className="h-full border border-black p-4">
               <div className="mb-2 flex items-center justify-between ">
@@ -80,7 +80,7 @@ export default function TicketInfoModal({
                   </h1>
                 </div>
                 <div
-                  className={`ml-40 mr-4 bg-${prioColors[index]}  w-fit py-1 px-2 text-white`}
+                  className={`ml-40 mr-4 bg-${prioColors[index]}  w-fit px-2 py-1 text-white`}
                 >
                   <h1 className=" font-semibold">{ticketData.prio}</h1>
                 </div>
@@ -89,7 +89,7 @@ export default function TicketInfoModal({
                 <h2 className="text-lg font-semibold text-[#1D3557]">
                   Description
                 </h2>
-                <p className="ml-2 mb-4 h-32 max-h-52 w-4/5">
+                <p className="mb-4 ml-2 h-32 max-h-52 w-4/5">
                   {ticketData.desc}
                 </p>
                 <div className="flex">

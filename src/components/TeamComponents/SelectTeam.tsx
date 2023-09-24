@@ -22,7 +22,7 @@ export default function SelectTeam(props: any) {
         props.setMembers({ ...props.members, memberArray: tempData.reverse() });
       })
       .catch((error) => {
-        console.log(error.response);
+        // console.log(error.response);
       });
   };
 
