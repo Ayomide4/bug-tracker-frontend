@@ -131,7 +131,7 @@ export default function ({ setTrigger, notify }: Props) {
       {loading && (
         <div
           role="status"
-          className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 "
+          className="fixed left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col-reverse items-center "
         >
           <svg
             aria-hidden="true"
@@ -150,6 +150,9 @@ export default function ({ setTrigger, notify }: Props) {
             />
           </svg>
           <span className="sr-only">Loading...</span>
+          <h1 className="mb-4 text-xl font-bold text-black">
+            This site takes a bit to load! Don't give up!
+          </h1>
         </div>
       )}
 
